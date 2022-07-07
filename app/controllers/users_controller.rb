@@ -5,7 +5,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @books = @user.books
     @book = Book.new
-     @book_comment = BookComment.new
+    @book_comment = BookComment.new
+    @users = User.all
   end
 
   def index
@@ -37,6 +38,7 @@ class UsersController < ApplicationController
       redirect_to user_path(current_user)
     end
   end
+
 end
  private
 
@@ -49,4 +51,4 @@ end
   end
    def post_comment_params
     params.require(:book_comment).permit(:comment)
-  end
+   end
