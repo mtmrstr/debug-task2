@@ -10,7 +10,7 @@
   </ul>
 <% end %>
   		<h1>Editing Book</h1>
-  	     <%= form_with model:@book do |f| %>
+  	     <%= form_with model:@book  do |f| %>
 
           <label for="book_title"> title</label>
           <div class="form_group">
@@ -23,8 +23,6 @@
           <div class="form_group">
             <%= f.text_area :body %>
          </div>
-
-
          <div for="form_group">
             <%= f.submit 'Update Book' ,class:"btn btn-success" %>
           </div>
